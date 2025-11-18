@@ -7,7 +7,7 @@ using System.Linq;
 namespace AlgorithmTests
 {
     [TestClass]
-    public class CoctkailSortTests
+    public class CocktailSortTests
     {
         [TestMethod]
         public void SortTest()
