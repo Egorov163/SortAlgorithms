@@ -8,7 +8,6 @@ namespace Algorithm
     {
         public int SwopCount { get; protected set; } = 0;
         public int ComparisonCount { get; protected set; } = 0;
-
         public List<int> Items { get; set; } = new List<int>();
 
         protected void Swop(int positionA, int positionB)
