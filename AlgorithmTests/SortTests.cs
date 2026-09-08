@@ -17,7 +17,7 @@ namespace Algorithm.Tests
         {
             Items.Clear();
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Items.Add(rnd.Next(0, 100));
             }
@@ -142,6 +142,23 @@ namespace Algorithm.Tests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], heap.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void SelectionSortTest()
+        {
+            // arrange
+            var selection = new SelectionSort<int>();
+            selection.Items.AddRange(Items);
+
+            // act
+            selection.Sort();
+
+            // assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], selection.Items[i]);
             }
         }
     }

@@ -16,17 +16,6 @@ namespace SortAlgorithms
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             if (int.TryParse(AddTextBox.Text, out int value))
@@ -58,7 +47,13 @@ namespace SortAlgorithms
             FillTextBox.Text = "";
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -68,28 +63,33 @@ namespace SortAlgorithms
 
         }
 
-        private void BubbleSortButton_Click(object sender, EventArgs e)
-        {
-            var bubble = new BubbleSort<SortedItem>(items);
-            bubble.CompareEvent += Bubble_CompareEvent;
-            bubble.SwopEvent += Bubble_SwopEvent;
-            bubble.Sort();
-        }
+        //private void BubbleSortButton_Click(object sender, EventArgs e)
+        //{
+        //    var bubble = new BubbleSort<SortedItem>(items);
+        //    bubble.CompareEvent += Bubble_CompareEvent;
+        //    bubble.SwopEvent += Bubble_SwopEvent;
+        //    bubble.Sort();
+        //}
 
-        private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
-        {
-            var temp = e.Item1.Value;
-            e.Item1.SetValue(e.Item2.Value);
-            e.Item2.SetValue(temp);
+        //private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        //{
+        //    var temp = e.Item1.Value;
+        //    e.Item1.SetValue(e.Item2.Value);
+        //    e.Item2.SetValue(temp);
 
-            panel3.Refresh();
-        }
+        //    panel3.Refresh();
+        //}
 
-        private void Bubble_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        //private void Bubble_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        //{
+        //    e.Item1.SetColor(Color.Red);
+        //    e.Item2.SetColor(Color.Green);
+        //    panel3.Refresh();
+        //}
+
+        private void label3_Click_1(object sender, EventArgs e)
         {
-            e.Item1.SetColor(Color.Red);
-            e.Item2.SetColor(Color.Green);
-            panel3.Refresh();
+
         }
     }
 }

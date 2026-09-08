@@ -122,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Location = new System.Drawing.Point(444, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(487, 425);
+            this.panel3.Size = new System.Drawing.Size(487, 146);
             this.panel3.TabIndex = 4;
             // 
             // BubbleSortButton
@@ -133,7 +133,6 @@
             this.BubbleSortButton.TabIndex = 5;
             this.BubbleSortButton.Text = "BubbleSort";
             this.BubbleSortButton.UseVisualStyleBackColor = true;
-            this.BubbleSortButton.Click += new System.EventHandler(this.BubbleSortButton_Click);
             // 
             // Form1
             // 
