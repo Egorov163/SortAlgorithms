@@ -47,6 +47,36 @@ namespace SortAlgorithms
             FillTextBox.Text = "";
         }
 
+        private void BubbleSortButton_Click(object sender, EventArgs e)
+        {
+            var bubble = new BubbleSort<SortedItem>(items);
+            bubble.CompareEvent += Bubble_CompareEvent;
+            bubble.SwopEvent += Bubble_SwopEvent;
+            bubble.Sort();
+        }
+
+        private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        {
+            var temp = e.Item1.Number;
+            e.Item1.SetPosition(e.Item2.Number);
+            e.Item2.SetPosition(temp);
+
+            panel3.Refresh();
+        }
+
+        private void Bubble_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        {
+            e.Item1.SetColor(Color.Red);
+            e.Item2.SetColor(Color.Green);
+            panel3.Refresh();
+        }
+
+        private void Swop(SortedItem a, SortedItem b)
+        {
+            a.SetColor(Color.Red); 
+            b.SetColor(Color.Green);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -91,5 +121,6 @@ namespace SortAlgorithms
         {
 
         }
+
     }
 }
